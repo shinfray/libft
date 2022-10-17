@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:28:00 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 15:59:46 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:45:19 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	ptr = NULL;
+	if (s == NULL)
+		return (NULL);
 	s_len = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
