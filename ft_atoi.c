@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:22:29 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 18:17:06 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/17 20:36:02 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_isspace(int c)
 {
-	return ((c >= 9 && c <= 13) || c == 32);
+	return ((c >= 9 && c <= 13) || c == ' ');
 }
 
 int	ft_atoi(const char *str)
@@ -30,15 +30,16 @@ int	ft_atoi(const char *str)
 		++str;
 	if (*str == '+' || *str == '-')
 	{
-		if (*str == '-')
+		if (*str++ == '-')
 			sign = -1;
-		++str;
 	}
 	while (ft_isdigit(*str) != 0)
+	{
 		n = n * 10 + *str++ - '0';
-	if (n > LLONG_MAX && sign > 0)
-		return (-1);
-	else if (n > LLONG_MAX && sign < 0)
-		return (0);
+		if (n > LLONG_MAX && sign > 0)
+			return (-1);
+		if (n > LLONG_MAX && sign < 0)
+			return (0);
+	}
 	return (n * sign);
 }
