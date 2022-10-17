@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:14:13 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 20:27:56 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:37:35 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	cast_src = (const char *)src;
 	if (dst < src)
 		ft_memcpy(dst, src, len);
-	else
+	else if (dst != src)
 	{
 		while (len-- != 0)
 			cast_dst[len] = cast_src[len];
