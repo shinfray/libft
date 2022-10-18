@@ -6,7 +6,7 @@
 #    By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 16:37:12 by shinfray          #+#    #+#              #
-#    Updated: 2022/10/17 10:12:08 by shinfray         ###   ########.fr        #
+#    Updated: 2022/10/18 20:15:11 by shinfray         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,13 @@ SRCS		= 	ft_isalpha.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
+B_SRCS		=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c
+
 OBJS		= ${SRCS:.c=.o}
+
+B_OBJS		= ${B_SRCS:.c=.o}
 
 NAME		= libft.a
 
@@ -63,8 +69,11 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
+bonus:		${OBJS} ${B_OBJS}
+			@ar rcs ${NAME} ${OBJS} ${B_OBJS}
+
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${B_OBJS}
 
 fclean:		clean
 			${RM} ${NAME}

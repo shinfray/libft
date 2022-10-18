@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:17:59 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 17:12:19 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/18 20:43:48 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 size_t	ft_strlen(const char *s)
 {
-	const char	*p;
+	const char *const	p = s;
 
-	p = s;
-	while (*p != '\0' )
-		++p;
-	return (p - s);
+	while (*s != '\0' )
+		++s;
+	return (s - p);
 }
