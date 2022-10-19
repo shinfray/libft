@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:24:32 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 14:47:16 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/19 15:15:34 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	tab = NULL;
 	i = 0;
-	if (s == NULL || f == NULL)
+	if (s == NULL || (f) == NULL)
 		return (NULL);
 	tab = ft_calloc(ft_strlen(s) + 1, sizeof(*tab));
 	if (tab == NULL)
