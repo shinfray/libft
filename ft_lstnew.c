@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:41:26 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/18 18:55:19 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:49:03 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
-	new_node = ft_calloc(1, sizeof(t_list));
+	new_node = ft_calloc(1, sizeof(*new_node));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->content = content;

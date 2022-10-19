@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 10:50:53 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/19 12:31:50 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/19 18:42:49 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	void	*saved_next;
+	void	*temp;
 
 	if (lst == NULL || (del) == NULL)
 		return ;
-	if (*lst == NULL)
-		return ;
-	else
+	while (*lst != NULL)
 	{
-		while (*lst != NULL)
-		{
-			saved_next = (*lst)->next;
-			ft_lstdelone(*lst, (del));
-			*lst = saved_next;
-		}
+		temp = *lst;
+		*lst = (*lst)->next;
+		ft_lstdelone(temp, (del));
 	}
 }
