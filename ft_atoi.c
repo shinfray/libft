@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:22:29 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 23:56:19 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:09:43 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int	ft_atoi(const char *str)
 
 	n = 0;
 	sign = 1;
-	if (str == NULL)
-		return (0);
 	while (ft_isspace(*str) != 0)
 		++str;
 	if (*str == '+' || *str == '-')
