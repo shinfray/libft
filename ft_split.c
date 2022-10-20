@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:01:23 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/19 16:23:53 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/20 18:27:37 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	if (tab == NULL)
 		return (NULL);
 	o_tab = tab;
-	while (wordcount--)
+	while (wordcount-- != 0)
 	{
 		while (*s != '\0' && *s == c)
 			++s;
