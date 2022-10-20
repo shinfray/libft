@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:22:29 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/20 11:06:22 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/20 13:17:01 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,4 @@ int	ft_atoi(const char *str)
 			return (0);
 	}
 	return (n * sign);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n", ft_atoi("1231231231213"));	
-	printf("%d\n", atoi("1231231231213"));	
-	return (0);
 }
