@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 20:31:06 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 17:21:59 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/20 15:33:49 by simonhinf        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	c2 = c;
-	const char	*ptr;
+	char		*ptr;
+	char		*cast_s;
 
 	ptr = NULL;
+	cast_s = (char *)s;
 	while (1)
 	{
-		if (*s == c2)
-			ptr = s;
-		if (*s == '\0')
-			return ((char *)ptr);
-		++s;
+		if (*cast_s == c2)
+			ptr = cast_s;
+		if (*cast_s == '\0')
+			return (ptr);
+		++cast_s;
 	}
 	return (NULL);
 }
