@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 10:42:01 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/20 18:36:12 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/21 01:41:04 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst != NULL || (del) != NULL)
+	if (lst != NULL)
 	{
-		(*del)(lst->content);
+		if ((del) != NULL)
+			(*del)(lst->content);
 		free(lst);
 		lst = NULL;
 	}

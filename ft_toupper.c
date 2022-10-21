@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:22:34 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/08 14:51:31 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/21 02:39:42 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_islower(int c)
 {
-	return (c >= 97 && c <= 122);
+	return (c >= 'a' && c <= 'z');
 }
 
 int	ft_toupper(int c)

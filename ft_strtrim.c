@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:35:08 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 04:33:44 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/21 02:35:09 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		dest_len = ptr - s1 + 1;
 	}
 	dest = ft_calloc(dest_len + 1, sizeof(*dest));
+	if (dest == NULL)
+		return (NULL);
 	ft_strlcpy(dest, s1, dest_len + 1);
 	return (dest);
 }

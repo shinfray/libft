@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:28:00 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/17 17:45:19 by simonhinf        ###   ########.fr       */
+/*   Updated: 2022/10/21 02:37:04 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (s == NULL)
-		return (NULL);
 	if (start >= s_len)
 		return (ft_strdup(""));
 	else if (s_len - start < len)
