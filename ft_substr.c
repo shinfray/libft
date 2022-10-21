@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:28:00 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/21 02:37:04 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/21 23:18:38 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else if (s_len - start < len)
 		len = s_len - start;
 	ptr = ft_calloc(len + 1, sizeof(*ptr));
-	if (ptr == NULL)
-		return (NULL);
-	ft_strlcpy(ptr, s + start, len + 1);
+	if (ptr != NULL)
+		ft_strlcpy(ptr, s + start, len + 1);
 	return (ptr);
 }
