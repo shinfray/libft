@@ -6,7 +6,7 @@
 /*   By: simonhinf <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:40:36 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/21 01:47:40 by shinfray         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:32:31 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*ptr;
 
-	if (lst == NULL || (f) == NULL)
+	if (lst == NULL || (f) == NULL || (del) == NULL)
 		return (NULL);
 	new_list = NULL;
 	while (lst != NULL)
