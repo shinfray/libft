@@ -6,7 +6,7 @@
 /*   By: shinfray <shinfray@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:01:23 by shinfray          #+#    #+#             */
-/*   Updated: 2022/10/21 01:59:06 by shinfray         ###   ########.fr       */
+/*   Updated: 2023/01/10 02:38:40 by shinfray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,15 @@ static size_t	ft_strlen_split(const char *s, const char c)
 	return (ptr - s);
 }
 
-static void	ft_free_whole_tab(char **tab)
+static char	**ft_free_whole_tab(char **tab)
 {
 	char	**ptr;
 
 	ptr = tab;
 	while (*tab != NULL)
-	{
-		free(*tab);
-		*tab = NULL;
-		++tab;
-	}
-	if (tab != NULL)
-	{
-		free(ptr);
-		ptr = NULL;
-	}
+		free(*tab++);
+	free(ptr);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,10 +71,7 @@ char	**ft_split(char const *s, char c)
 			++s;
 		*tab = ft_substr(s, 0, ft_strlen_split(s, c));
 		if (*tab == NULL)
-		{
-			ft_free_whole_tab(o_tab);
-			return (NULL);
-		}
+			return (ft_free_whole_tab(o_tab));
 		s += ft_strlen_split(s, c);
 		++tab;
 	}
